@@ -1,0 +1,23 @@
+# List of repositories to look for pull requests.
+# Please specify full names of repositories i.e. <owner>/<repository>
+repositories:
+  - "northpl93/repo1"
+  - "northpl93/dependabot_test"
+
+# How many repositories can be processed concurrently
+concurrency: 4
+
+# Conditions that pull requests must meet
+pullRequestsFilter:
+  # String that title must contain, if null then disabled
+  title: null
+  # String that branch name must contain, if null then disabled
+  branch: null
+  # Labels that pull request must have, if empty list then disabled
+  labels:
+    - "dependencies"
+
+# GitHub credentials
+credentials:
+  username: "northpl93"
+  password: "xxx"

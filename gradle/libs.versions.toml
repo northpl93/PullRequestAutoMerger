@@ -1,0 +1,25 @@
+[versions]
+axion = "1.13.13"
+slf4j = "2.0.7"
+kotlin-logging = "3.0.5"
+jopt-simple = "5.0.4"
+github-api = "1.315"
+jgit = "6.6.0.202305301015-r"
+javassist = "3.29.2-GA"
+jackson = "2.15.0"
+
+[plugins]
+axion-release = { id = "pl.allegro.tech.build.axion-release", version.ref = "axion" }
+
+[libraries]
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+kotlin-logging = { module = "io.github.microutils:kotlin-logging-jvm", version.ref = "kotlin-logging" }
+jopt-simple = { module = "net.sf.jopt-simple:jopt-simple", version.ref = "jopt-simple" }
+github-api = { module = "org.kohsuke:github-api", version.ref = "github-api" }
+jgit = { module = "org.eclipse.jgit:org.eclipse.jgit", version.ref = "jgit" }
+javassist = { module = "org.javassist:javassist", version.ref = "javassist" }
+
+jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "jackson" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jackson" }
+jackson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
