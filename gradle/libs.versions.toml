@@ -6,7 +6,7 @@ jopt-simple = "5.0.4"
 github-api = "1.315"
 jgit = "6.6.0.202305301015-r"
 javassist = "3.29.2-GA"
-jackson = "2.15.0"
+jackson = "2.15.2"
 
 [plugins]
 axion-release = { id = "pl.allegro.tech.build.axion-release", version.ref = "axion" }
