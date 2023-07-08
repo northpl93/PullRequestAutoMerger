@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions: write-all
     steps:
       - uses: actions/checkout@v3
         with:
@@ -35,7 +35,7 @@ jobs:
 
       - name: Read current version
         id: read-version
-        run: "echo ::set-output name=version::v$(./gradlew -q cV -Prelease.quiet)"
+        run: echo "version=v$(./gradlew -q cV -Prelease.quiet)" >> $GITHUB_OUTPUT
         if: github.ref == 'refs/heads/master'
 
       - name: Upload release
