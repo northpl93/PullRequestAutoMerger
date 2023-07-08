@@ -1,1 +1,1 @@
-rootProject.name = "PullRequestAutoMerge"
+rootProject.name = "PullRequestAutoMerger"

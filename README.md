@@ -83,10 +83,10 @@ in project's root directory. You can also download compiled binary from [release
 1. Download or compile PullRequestAutoMerger
 2. Make sure you have Java installed and `PATH` is properly configured, so you can use it from the command line
 3. [Generate new token](https://github.com/settings/tokens) on GitHub
-4. Generate default config `java -jar PullRequestAutoMerge-1.0-SNAPSHOT.jar --copy-default-config`
+4. Generate default config `java -jar PullRequestAutoMerger-1.0-SNAPSHOT.jar --copy-default-config`
 5. Configure the application
    * specify a list of repositories
    * ensure the pull requests filter suits your needs
    * specify username & token
-6. Launch the application `java -jar PullRequestAutoMerge-1.0-SNAPSHOT.jar`
+6. Launch the application `java -jar PullRequestAutoMerger-1.0-SNAPSHOT.jar`
 7. Observe the logs, if everything works correctly there should be no warns/errors
