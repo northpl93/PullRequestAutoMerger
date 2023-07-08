@@ -45,9 +45,13 @@ class SelectPullRequests(
                 }
             }
 
-            return@filter with(filterConfig.labels) {
-                !(isNotEmpty() && pullRequest.hasLabel(this))
+            with(filterConfig.labels) {
+                if (isNotEmpty()) {
+                    return@filter pullRequest.hasLabel(this)
+                }
             }
+
+            return@filter true
         }
     }
 

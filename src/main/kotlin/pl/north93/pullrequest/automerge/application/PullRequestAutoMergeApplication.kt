@@ -7,6 +7,8 @@ import mu.KotlinLogging
 import org.kohsuke.github.GHFileNotFoundException
 import org.kohsuke.github.GHRepository
 import org.kohsuke.github.GitHub
+import org.kohsuke.github.GitHubBuilder
+import org.kohsuke.github.extras.HttpClientGitHubConnector
 import pl.north93.pullrequest.automerge.config.MergerApplicationConfig
 import pl.north93.pullrequest.automerge.worker.RunStepWorker
 import java.io.File
@@ -24,7 +26,10 @@ class PullRequestAutoMergeApplication(
 
         val mergerApplicationConfig = loadConfig()
         val github = with(mergerApplicationConfig.credentials){
-            GitHub.connect(username, password)
+            GitHubBuilder()
+                .withOAuthToken(password, username)
+                .withConnector(HttpClientGitHubConnector())
+                .build();
         }
 
         val executorService = Executors.newFixedThreadPool(mergerApplicationConfig.concurrency)

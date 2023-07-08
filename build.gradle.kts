@@ -28,6 +28,7 @@ dependencies {
 
 tasks.jar {
     manifest.attributes["Main-Class"] = "pl.north93.pullrequest.automerge.Main"
+    manifest.attributes["Multi-Release"] = true
     val dependencies = configurations
         .runtimeClasspath
         .get()
