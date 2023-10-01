@@ -4,7 +4,7 @@ slf4j = "2.0.7"
 kotlin-logging = "3.0.5"
 jopt-simple = "5.0.4"
 github-api = "1.315"
-jgit = "6.6.0.202305301015-r"
+jgit = "6.7.0.202309050840-r"
 javassist = "3.29.2-GA"
 jackson = "2.15.2"
 
